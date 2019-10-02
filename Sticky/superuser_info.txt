@@ -1,0 +1,5 @@
+
+Superuser info
+
+user: admin
+pass: a
