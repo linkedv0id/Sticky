@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     #Sticky Related
     'chart',
-    'user'
+    'user',
+    'note'
 ]
 
 MIDDLEWARE = [

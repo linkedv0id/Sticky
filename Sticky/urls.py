@@ -9,7 +9,7 @@ from django import forms
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['user', 'password', 'first_name', 'last_name', 'email', 'document_ID', 'photo']
+        fields = '__all__'
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
