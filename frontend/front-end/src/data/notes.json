@@ -1,0 +1,28 @@
+
+{
+  "notes": [ 
+  	{
+
+		"chart_id":0,
+		"notes_text":["Buy The Joker tickets with Annie!", "See The Joker next Friday!"]
+		
+	}, 
+	{
+
+		"chart_id":1,
+		"notes_text":["Cómo dejar de hacer jaleas sin sabor"]
+	}, 
+	{
+
+		"chart_id":2,
+		"notes_text":["Stop procastinating!", "1", "2"]
+	},
+	{
+
+		"chart_id":3,
+		"notes_text":["Jams, Eggs and Hams", "3", "4"]
+	}
+
+  ]
+
+  }

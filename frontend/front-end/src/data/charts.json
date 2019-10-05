@@ -1,0 +1,30 @@
+
+{
+  "charts": [ 
+  	{
+  		"id":0,
+		"owner":"Tim",
+		"privacy":"public",
+		"title":"Chart 1"
+	},
+	{
+		"id":1,
+		"owner":"Tim",
+		"privacy":"private",
+		"title":"Secret ideas!"
+	}, 
+	{
+		"id":2,
+		"owner":"James",
+		"privacy":"public",
+		"title":"Chart 2"
+	}, 
+	{
+		"id":3,
+		"owner":"Robbie",
+		"privacy":"private",
+		"title":"Chart"
+	}
+  ]
+
+  }

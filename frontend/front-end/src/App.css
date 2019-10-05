@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+background: #FFFFFF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom right, #4285f4, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom right, #4285f4, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+nav{
+  
+  padding: 15px;
+  margin:5px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+#numOfTasks{
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  float: left;
+  
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.totalCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.totalRight{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.totalLeft{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.absCenter{
+     height: auto;
+    position: fixed;
+    z-index:15;
+}
+
+.btn-xs{
+  font-size: 7px;
+padding: 1px 8px
+}
+
+#formPopUp{
+  transition: opacity 0.4s;
+  background: black;
+  opacity: 0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
