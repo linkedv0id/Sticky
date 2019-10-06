@@ -10,13 +10,15 @@ class Chart extends Component {
     super();
     this.state = {
       charts,
+      notes,
       displayNoteForm:false
     };
 
   //this.addChart = this.addChart.bind(this);
-  this.addNote = this.addNote.bind(this);
   this.showNoteForm = this.showNoteForm.bind(this);
   this.hideNoteForm = this.hideNoteForm.bind(this);
+  this.addNote = this.addNote.bind(this);
+  this.multipleFuncs = this.multipleFuncs.bind(this);
   
 
   }
@@ -24,13 +26,29 @@ class Chart extends Component {
   hideNoteForm() {
   this.setState({
     displayNoteForm: false
-  })
+  });
+    console.log("HIDE!");
 }
 
   showNoteForm() {
       this.setState({
           displayNoteForm: true,
       });
+      console.log("SHOW!");
+  }
+
+  multipleFuncs(note){
+    this.addNote(note);
+    this.hideNoteForm();
+  }
+  
+
+  addNote(note){
+    console.log("addNote!");
+    this.setState({
+      notes: [...this.state.notes, note]
+    })
+    
   }
 
   /*addChart(chart){
@@ -39,17 +57,6 @@ class Chart extends Component {
     })
 
   }*/
-
-  multipleFuncs(){
-    this.hideNoteForm();
-    this.addNote(note);
-  }
-
-    addNote(note){
-    this.setState({
-      notes: [...this.state.notes, note]
-    })
-  }
 
   removeChart(index){
     this.setState({
@@ -114,9 +121,9 @@ class Chart extends Component {
                       </div>
                       <div className="row">
                       <div className="col-md-1"> </div>
-                      <div className="col-md-8">
+                      <div className="col-md-8 ">
                           { this.state.displayNoteForm ? 
-                          <NoteForm chartID={chart.id} funcs={this.multipleFuncs}/> 
+                          <NoteForm chartID={chart.id} onAddNote={this.multipleFuncs}/> 
                           : null }
                       </div>
                       <div className="col-md-1"> </div>

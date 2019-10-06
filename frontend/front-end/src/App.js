@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Title from './components/Title'
 import Chart from './components/Chart'
-import NoteForm from './components/NoteForm'
-
-//import FormChart from './components/FormChart'
 import { charts } from './data/charts.json'
 
 

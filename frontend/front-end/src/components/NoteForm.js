@@ -5,27 +5,27 @@ class NoteForm extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      notes
+      chart_id:this.props.chartID,
+      notes_text:[]
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.severalFuncs = this.severalFuncs.bind(this);
 
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("this.props");
-    console.log(this.props);
+    console.log("handleSubmit");
     this.props.addNote(this.state);
     this.setState({
       "chart_id":this.props.id,
-      "notes_text":""
+      "notes_text":notes[this.props.chartID].notes_text.push(this.state.notes_text)
     });
   }
 
 
   handleInput(e) {
+    console.log("handleInput");
     const {value, name} = e.target;
     this.setState({
       [name]: value
@@ -33,10 +33,10 @@ class NoteForm extends Component {
   } 
 
   // Hides form and binds handleSubmit
-  severalFuncs(e){
+  /*severalFuncs(e){
     this.props.hideNoteForm();
-    this.handleSubmit(e);
-  }
+    //this.handleSubmit(e);
+  }*/
 
   render() {
     return (
@@ -45,7 +45,7 @@ class NoteForm extends Component {
           <div className="form-group">
             <input
               type="text"
-              name="noteText"
+              name="notes_text"
               className="form-control"
               onChange={this.handleInput}
               placeholder="Note Text"
@@ -53,7 +53,7 @@ class NoteForm extends Component {
           </div>
         </form>
           
-          <button type="submit" className="btn btn-primary" onClick={this.severalFuncs}>
+          <button type="submit" className="btn btn-primary" onClick={this.props.onAddNote}>
             Add
           </button>
       </div>
